@@ -10,7 +10,7 @@ async function onClickedEstimatePrice() {
     var estPrice = document.getElementById("uiEstimatedPrice");
 
     // FastAPI server ka URL (Hamara local server)
-    var url = "http://127.0.0.1:8000/predict_home_price";
+    var url = "https://bengaluruhppredictor-4jyn.onrender.com/predict_home_price";
 
     // API ko data bhejo (POST request)
     const response = await fetch(url, {
@@ -35,7 +35,7 @@ async function onClickedEstimatePrice() {
 async function onPageLoad() {
     console.log( "document loaded" );
     // Hum ek endpoint banayenge jo locations ki list dega (Abhi banate hain)
-    var url = "http://127.0.0.1:8000/get_location_names"; 
+    var url = "https://bengaluruhppredictor-4jyn.onrender.com/get_location_names"; 
     
     const response = await fetch(url);
     const data = await response.json();
