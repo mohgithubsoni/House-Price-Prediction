@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f4f7f6;
+    color: #2d3436;
+    line-height: 1.6;
+}
+
+/* Background Image with Overlay */
+.bg-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+.app-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+.app-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.sub-heading {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Card Design */
+.card {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2d3436;
+}
+
+/* Inputs & Dropdowns */
+.area-input, .location-dropdown {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #dfe6e9;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.area-input:focus, .location-dropdown:focus {
+    outline: none;
+    border-color: #00b894;
+}
+
+.helper-text {
+    display: block;
+    font-size: 0.8rem;
+    color: #636e72;
+    margin-top: 5px;
+}
+
+/* Modern Radio Buttons (Switch Field) */
+.switch-field {
+    display: flex;
+    overflow: hidden;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+}
+
+.switch-field input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px; width: 1px; border: 0;
+}
+
+.switch-field label {
+    background-color: #ffffff;
+    color: #2d3436;
+    font-size: 0.9rem;
+    line-height: 1;
+    text-align: center;
+    padding: 10px 16px;
+    margin-right: -1px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.switch-field input:checked + label {
+    background-color: #00b894;
+    color: white;
+    box-shadow: none;
+}
+
+/* Button Styling */
+.cta-section {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: #00b894;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #019477;
+    transform: translateY(-2px);
+}
+
+.cta-footer {
+    font-size: 0.85rem;
+    color: #636e72;
+    margin-top: 10px;
+}
+
+/* Result Area */
+.result-display h2 {
+    margin-top: 25px;
+    padding: 15px;
+    background: #e6f7f3;
+    border-radius: 10px;
+    color: #00b894;
+    text-align: center;
+    font-size: 1.8rem;
+    border: 1px dashed #00b894;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .app-header h1 { font-size: 1.8rem; }
+    .card { padding: 25px; }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengaluru House Price Predictor | Smart ML Tool</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="bg-overlay"></div>
+
+    <main class="main-container">
+        <header class="app-header">
+            <h1>Bengaluru House Price Predictor</h1>
+            <p class="sub-heading">An intelligent AI-powered tool for <strong>buyers, sellers, and investors</strong> to estimate real-time property market values across Bengaluru.</p>
+        </header>
+
+        <div class="card">
+            <form id="prediction-form">
+                <div class="input-group">
+                    <label for="uiSqft">Total Area (Square Feet)</label>
+                    <input class="area-input" type="number" id="uiSqft" name="Squareft" value="1000" placeholder="e.g. 1200">
+                    <small class="helper-text">Typical Bengaluru apartment sizes range from 600 to 2500+ sqft.</small>
+                </div>
+
+                <div class="input-group">
+                    <label>BHK (Bedrooms, Hall, Kitchen)</label>
+                    <div class="switch-field">
+                        <input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
+                        <label for="radio-bhk-1">1</label>
+                        <input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>
+                        <label for="radio-bhk-2">2</label>
+                        <input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
+                        <label for="radio-bhk-3">3</label>
+                        <input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
+                        <label for="radio-bhk-4">4</label>
+                    </div>
+                    <small class="helper-text">BHK defines the configuration of the house; higher BHK typically increases market value.</small>
+                </div>
+
+                <div class="input-group">
+                    <label>Bathrooms</label>
+                    <div class="switch-field">
+                        <input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+                        <label for="radio-bath-1">1</label>
+                        <input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+                        <label for="radio-bath-2">2</label>
+                        <input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+                        <label for="radio-bath-3">3</label>
+                        <input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
+                        <label for="radio-bath-4">4</label>
+                    </div>
+                    <small class="helper-text">Modern amenities and attached bathrooms significantly impact premium pricing.</small>
+                </div>
+
+                <div class="input-group">
+                    <label for="uiLocations">Prime Location</label>
+                    <select class="location-dropdown" id="uiLocations">
+                        <option value="" disabled selected>Select specific locality in Bengaluru</option>
+                    </select>
+                    <small class="helper-text">Location is the #1 factor; prices vary drastically from Indiranagar to Sarjapur.</small>
+                </div>
+
+                <div class="cta-section">
+                    <button class="submit-btn" onclick="onClickedEstimatePrice()" type="button">Estimate Market Price</button>
+                    <p class="cta-footer">Get an estimated market price instantly based on latest trends.</p>
+                </div>
+
+                <div id="uiEstimatedPrice" class="result-display">
+                    </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
