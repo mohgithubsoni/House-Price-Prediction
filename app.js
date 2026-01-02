@@ -33,20 +33,28 @@ async function onClickedEstimatePrice() {
 
 // 2. Page load hote hi sari locations dropdown mein bhar do
 async function onPageLoad() {
-    console.log( "document loaded" );
-    // Hum ek endpoint banayenge jo locations ki list dega (Abhi banate hain)
+    console.log("document loaded, fetching locations...");
     var url = "https://bengaluruhppredictor-4jyn.onrender.com/get_location_names"; 
     
-    const response = await fetch(url);
-    const data = await response.json();
-    
-    if(data) {
-        var locations = data.locations;
-        var uiLocations = document.getElementById("uiLocations");
-        for(var i in locations) {
-            var opt = new Option(locations[i]);
-            uiLocations.add(opt);
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        if(data && data.locations) {
+            console.log("Locations received!");
+            var locations = data.locations;
+            var uiLocations = document.getElementById("uiLocations");
+            
+            // Purani list saaf karo placeholder ke alawa
+            uiLocations.innerHTML = '<option value="" disabled selected>Select specific locality in Bengaluru</option>';
+            
+            for(var i in locations) {
+                var opt = new Option(locations[i]);
+                uiLocations.add(opt);
+            }
         }
+    } catch (error) {
+        console.log("Backend waking up... please wait 1 minute and refresh.");
     }
 }
 
