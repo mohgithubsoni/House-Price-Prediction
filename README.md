@@ -1,15 +1,67 @@
-# Bengaluru House Price Predictor 🏠
+# 🏠 Bengaluru House Price Predictor (End-to-End Machine Learning Project)
 
-An end-to-end Machine Learning web application that predicts real estate prices in Bengaluru using Linear Regression.
+An AI-powered web application that predicts house prices in Bengaluru based on real-world real estate data.  
+This project demonstrates the complete Machine Learning lifecycle — from data preprocessing and model training to backend API development and cloud deployment.
+
+---
+
+## 🌍 Live Demo
+- **Frontend (Web App):**  
+  https://mohithubsoni.github.io/House-Price-Prediction/
+
+- **Backend (FastAPI API):**  
+  https://bengaluruhppredictor-4jyn.onrender.com/
+
+---
 
 ## 🚀 Features
-- **Accurate Predictions**: Uses a trained Scikit-learn model with 80% accuracy.
-- **Modern UI**: Professional frontend with helper texts for buyers and investors.
-- **Fast Backend**: Powered by FastAPI for high-performance API responses.
-- **Data Engineering**: Comprehensive cleaning of 13,000+ records and outlier removal.
+- **Accurate Price Prediction** based on area (sqft), BHK, bathrooms, and location.
+- **Modern & Responsive UI** suitable for both mobile and desktop.
+- **FastAPI Backend** serving ML model predictions via REST API.
+- **Data Cleaning & Feature Engineering** using outlier detection techniques.
+
+---
 
 ## 🛠️ Tech Stack
-- **Languages**: Python, JavaScript, HTML, CSS
-- **ML Libraries**: Scikit-Learn, NumPy, Pandas
-- **Backend**: FastAPI, Uvicorn, Pickle
-- **Tools**: VS Code, Git/GitHub
+
+### Frontend
+- HTML5  
+- CSS3 (Flexbox, Grid, modern UI practices)  
+- JavaScript (Fetch API)
+
+### Backend
+- Python  
+- FastAPI  
+- Uvicorn  
+- Gunicorn  
+
+### Machine Learning
+- Scikit-learn  
+- Pandas  
+- NumPy  
+
+### Deployment
+- **Frontend:** GitHub Pages  
+- **Backend:** Render  
+
+---
+
+## 📊 Model Details
+- **Algorithm:** Linear Regression  
+- **Dataset:** Bengaluru House Price Dataset (Kaggle)  
+- **Techniques Used:**
+  - One-Hot Encoding for categorical features  
+  - Mean & Standard Deviation based outlier removal  
+
+---
+
+## 📖 How to Run Locally
+
+### Prerequisites
+- Python 3.8 or higher
+- Git
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/mohithubsoni/House-Price-Prediction.git
+cd House-Price-Prediction
