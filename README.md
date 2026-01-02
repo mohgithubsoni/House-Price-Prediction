@@ -53,15 +53,3 @@ This project demonstrates the complete Machine Learning lifecycle — from data 
   - One-Hot Encoding for categorical features  
   - Mean & Standard Deviation based outlier removal  
 
----
-
-## 📖 How to Run Locally
-
-### Prerequisites
-- Python 3.8 or higher
-- Git
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/mohithubsoni/House-Price-Prediction.git
-cd House-Price-Prediction
