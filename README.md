@@ -6,7 +6,7 @@ This project demonstrates the complete Machine Learning lifecycle — from data 
 ---
 
 ## 🌍 Live Demo
-- **Frontend (Web App):**  
+- **Frontend (Web Application):**  
   https://mohgithubsoni.github.io/House-Price-Prediction/
 
 - **Backend (FastAPI API):**  
